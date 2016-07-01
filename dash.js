@@ -56,7 +56,7 @@ $.each(supported, function(i, item){
   $.each(item.pages, function(j, page){
     // disable if in marks.json
     var addPage = "<div class='addPage' id='addPage" + j + "' data-domain='" + page.domain + "' data-page='" + page.name + "'>" + page.title + "</div>";
-    // if custom
+    // if custom (none at the moment)
     $elemi.append(addPage);
   })
 
@@ -109,7 +109,11 @@ function getPage(item, i, custom){
       elemi.insertCSS(fs.readFileSync(__dirname + '/map/' + item.domain + '/' + item.name + '/style.css', "utf8"));
       // inject universal styling
       elemi.insertCSS(fs.readFileSync(__dirname + '/map/univ.css', "utf8"));
-      elemi.openDevTools();
+
+      // open dev tools
+      //elemi.openDevTools();
+
+      // remove loading animation
       $(elemi).siblings('.webload').remove();
 
 
