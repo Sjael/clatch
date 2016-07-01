@@ -15,9 +15,11 @@
 
 * Might need to add Flash Pepper to browser to be able to run some content (Twitch player)
 * Remember window position, dimensions, and if maximized on program start
-* When tab containing <webview> is hidden, set webview dimensions to 0, might be tricky due to hidden tab possibly being display:none (http://electron.atom.io/docs/api/web-view-tag/#css-styling-notes)
+* When tab containing `<webview>` is hidden, set `webview` dimensions to 0, might be tricky due to hidden tab possibly being `display:none` (http://electron.atom.io/docs/api/web-view-tag/#css-styling-notes)
 
 
 ## Signing in before a handler is made
 
-On the trending tab there is a <webview> called 'startup'. Use the .loadURL() method to navigate to sites that needs to be signed into in order to have their feeds tested. Example: startup.loadURL(https://twitter.com) (http://electron.atom.io/docs/api/web-view-tag/#webviewloadurlurl-options)
+On the trending tab there is a `<webview>` called 'startup'. Use the `.loadURL()` method to navigate to sites that needs to be signed into in order to have their feeds tested. Example: `startup.loadURL(https://twitter.com)`
+
+Documentation: http://electron.atom.io/docs/api/web-view-tag/#webviewloadurlurl-options
