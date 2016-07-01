@@ -1,6 +1,5 @@
 ![](https://i.imgur.com/yfp1WP9.png)
 
-Internet Dashboard Browser
 
 ## To-Do
 
@@ -21,4 +20,4 @@ Internet Dashboard Browser
 
 ## Signing in before a handler is made
 
-On the trending tab there is a <webview> called 'startup'. Use the .loadURL() method to navigate to sites that needs to be signed into in order to have their feeds tested. (ex. startup.loadURL(https://twitter.com) )
+On the trending tab there is a <webview> called 'startup'. Use the .loadURL() method to navigate to sites that needs to be signed into in order to have their feeds tested. (http://electron.atom.io/docs/api/web-view-tag/#webviewloadurlurl-options)
