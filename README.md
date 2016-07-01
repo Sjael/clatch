@@ -20,4 +20,4 @@
 
 ## Signing in before a handler is made
 
-On the trending tab there is a <webview> called 'startup'. Use the .loadURL() method to navigate to sites that needs to be signed into in order to have their feeds tested. (http://electron.atom.io/docs/api/web-view-tag/#webviewloadurlurl-options)
+On the trending tab there is a <webview> called 'startup'. Use the .loadURL() method to navigate to sites that needs to be signed into in order to have their feeds tested. Example: startup.loadURL(https://twitter.com) (http://electron.atom.io/docs/api/web-view-tag/#webviewloadurlurl-options)
