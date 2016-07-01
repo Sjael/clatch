@@ -1,0 +1,101 @@
+{
+  "supported":{
+
+
+    "reddit":{
+      "site" : "Reddit",
+      "icon" : "http://www.reddit.com",
+  		"pages":{
+  			"Any_Subreddit": {
+          "domain" : "reddit",
+    			"title": "Any Subreddit",
+          "name" : "Any_Subreddit",
+          "sign": {
+            "need" : false
+          },
+    			"custom": true,
+    			"url": "http://www.reddit.com",
+          "selected": {
+            "shell" : "#siteTable",
+            "index" : "0",
+            "iso" : "div.thing"
+          }
+        }
+  		}
+    },
+
+    "twitch":{
+      "site" : "Twitch",
+      "icon" : "http://www.twitch.tv",
+  		"pages":{
+  			"Following": {
+          "domain" : "twitch",
+    			"title": "Following",
+          "name" : "Following",
+          "sign": {
+            "need" : true,
+            "detect": "div#login-subwindow",
+            "link" : "http://www.twitch.tv/directory/following"
+          },
+    			"custom": false,
+    			"url": "http://www.twitch.tv/directory/following",
+          "selected": {
+            "shell" : ".js-streams.streams.items",
+            "index" : "0",
+            "iso" : ".stream.item"
+          }
+        }
+  		}
+    },
+
+    "twitter":{
+      "site" : "Twitter",
+      "icon" : "http://www.twitter.com",
+  		"pages":{
+  			"Timeline": {
+          "domain" : "twitter",
+    			"title": "Timeline",
+          "name" : "Timeline",
+          "sign": {
+            "need" : true,
+            "detect": "",
+            "link" : ""
+          },
+    			"custom": false,
+    			"url": "http://www.twitter.com",
+          "selected": {
+            "shell" : "#timeline",
+            "index" : "0",
+            "iso" : ".js-stream-item.stream-item.stream-item.expanding-stream-item"
+          }
+        }
+  		}
+    },
+
+    "youtube":{
+      "site" : "YouTube",
+      "icon" : "http://www.youtube.com",
+  		"pages":{
+  			"Subscriptions": {
+          "domain" : "youtube",
+    			"title": "Subscriptions",
+    			"name": "Subscriptions",
+          "sign": {
+            "need": true,
+            "detect": "div#signin-container",
+            "link" : "https://accounts.google.com/ServiceLogin?service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26action_handle_signin%3Dtrue%26next%3D%252F%26app%3Ddesktop"
+          },
+          "custom": false,
+    			"url": "http://www.youtube.com/feed/subscriptions",
+          "selected": {
+            "shell" : "#content",
+            "index" : "0",
+            "iso" : ".yt-lockup-dismissable"
+          }
+        }
+  		}
+    }
+
+
+	}
+}

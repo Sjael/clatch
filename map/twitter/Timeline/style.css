@@ -1,0 +1,36 @@
+
+
+
+
+*:not(html){
+  visibility:hidden !important;
+}
+
+#timeline, #timeline * {
+  visibility: visible !important;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 0px !important;  /* remove scrollbar space */
+  background: transparent !important;  /* optional: just make scrollbar invisible */
+}
+
+
+
+#timeline{
+  overflow-y: scroll;
+  box-sizing: content-box;
+  width: 590px;
+  position:absolute !important;
+  top:-60px !important;
+  left:0 !important;
+  right:0 !important;
+
+}
+
+#timeline ol.stream-items li.js-stream-item {
+  border-left:0;
+  border-right:0;
+}

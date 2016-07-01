@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Clatch</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Stylesheets + Icons -->
+    <link rel="stylesheet" href="bootstrap/v3/css/bootstrap.css" />
+    <link rel="stylesheet" href="clatch.css" />
+    <link rel="stylesheet" href="assets/icons/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- jQuery + Bootstrap JS -->
+    <script type="text/javascript">window.$ = window.jQuery = require('./bootstrap/jquery.min.js');</script>
+    <script type="text/javascript" src="bootstrap/v3/js/bootstrap.js"></script>
+
+
+  </head>
+
+  <!-- Main Content -->
+  <body>
+
+    <!-- Drag bar -->
+    <div id="drag"></div>
+
+    <!-- Changing Content -->
+    <div id="base" class="full">
+      <!-- Top bar -->
+      <div id="bar">
+        <!-- Tab info bar -->
+        <div id="section">
+          <ul id="tabholder" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="dashtab active">
+              <a id="dasha" class="dashtab" href="#dashboard" data-toggle="tab">
+                <span id="" class="icon-cust-dash tabact"></span>
+                Dashboard
+              </a>
+            </li>
+            <li role="presentation" class="dashtab">
+              <a id="trenda" class="dashtab" href="#trending" data-toggle="tab">
+                <span id="" class="icon-fire tabact"></span>
+                Trending
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Min/Max/Close buttons -->
+        <div id="dock">
+          <span id="mini-btn" class="icon-cust-mini dockact"></span>
+          <span id="max-btn" class="icon-cust-max dockact"></span>
+          <span id="x-btn" class="icon-cust-x dockact"></span>
+        </div>
+
+      </div>
+
+      <!-- Tab Content -->
+      <div id = "switch" class="tab-content">
+
+        <div id="dashboard" class="tab-pane active" role="tabpanel">
+          <div id="canvas">
+
+            <div id="dashActHold">
+              <div id ="addhold" class="dashAct" data-toggle="modal" data-target="#addModal">
+                <div id="addCen" class="cen">
+                  <img id="addimg" class="dashActImg img-responsive" src="assets/plusPink.svg" />
+                  <span>Add Feed</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="trending" class="tab-pane" role="tabpanel">
+          <webview disablewebsecurity id="startup" style="height:100%;width:100%;" src="https://youtube.com"></webview>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Modals -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="addModalLabel">Add a Feed</h4>
+          </div>
+          <div class="modal-body" id="addList">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+
+  <!-- Scripts -->
+  <script>
+    // Handles adding a feed
+    $(document).ready(function(){
+      $('div.addPage').click(function(){
+        console.log(this);
+
+        var addDom = $(this).data("domain");
+        var addPag = $(this).data("page");
+
+        getPage(ref.supported[addDom].pages[addPag], dashCount, "");
+        $('#addModal').modal('hide');
+
+        // needs to disable feeds already in use
+      });
+    });
+
+
+
+  </script>
+
+  <!-- Dashboard functionality -->
+  <script type="text/JavaScript" src="dash.js"></script>
+  <!-- Dock Buttons -->
+  <script type="text/JavaScript" src="renderer.js"></script>
+
+</html>
