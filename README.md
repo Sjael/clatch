@@ -1,4 +1,4 @@
-![](http://i.imgur.com/hdZQz2Q.png =150x33)
+![](https://i.imgur.com/yfp1WP9.png)
 
 Internet Dashboard Browser
 
@@ -12,6 +12,3 @@ Internet Dashboard Browser
 * Might need to add Flash Pepper to browser to be able to run some content (Twitch player)
 * New feeds (Facebook, Techcrunch, Product Hunt, etc.)
 * Categorize different feeds in the 'Add Feed' modal, like a catalog
-
-
-"# clatch"
