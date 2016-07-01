@@ -111,10 +111,14 @@
         var addDom = $(this).data("domain");
         var addPag = $(this).data("page");
 
+        // Add the feed to page
         getPage(ref.supported[addDom].pages[addPag], dashCount, "");
+        // Save feed to marks.json
+        //
+
+        // Dismiss modal
         $('#addModal').modal('hide');
 
-        // needs to disable feeds already in use
       });
     });
 

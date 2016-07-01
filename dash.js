@@ -44,19 +44,28 @@ veri.list.forEach(function(item, i){
 });
 
 
-// add whitelisted feeds to the 'Add Feed' list
+// add whitelisted feeds to the 'Add Feed' DOM list
+// loop through each whitelisted site
 $.each(supported, function(i, item){
   var addSection = "<div class='addSite' id='addSite" + i + "'></div>";
   $('#addList').append(addSection);
   var elemi = document.getElementById("addSite" + i);
   var $elemi = $(elemi);
   $elemi.prepend("<div class='addHead' ><img id='addImg" + i + "'/><span id='addTitle" + i + "' >" + item.site + "</span></div> ");
+
+  // get favicon through google
   $('#addImg' + i).attr("src","https://www.google.com/s2/favicons?domain=" + item.icon);
 
+  // loop through each whitelisted page from each site
   $.each(item.pages, function(j, page){
-    // disable if in marks.json
+    //
+    // disable if already in marks.json
+    //
+    // add if custom functionality (i.e. custom subreddits)
+    //
+
     var addPage = "<div class='addPage' id='addPage" + j + "' data-domain='" + page.domain + "' data-page='" + page.name + "'>" + page.title + "</div>";
-    // if custom (none at the moment)
+    // add to page
     $elemi.append(addPage);
   })
 
