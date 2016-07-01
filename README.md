@@ -1,4 +1,4 @@
-![alt text][logo]
+![][logo]
 
 Internet Dashboard Browser
 
@@ -13,6 +13,6 @@ Internet Dashboard Browser
 * New feeds (Facebook, Techcrunch, Product Hunt, etc.)
 * Categorize different feeds in the 'Add Feed' modal, like a catalog
 
-[logo]: http://i.imgur.com/hdZQz2Q.png
+[logo]: http://i.imgur.com/hdZQz2Q.png =150x33
 
 "# clatch"
