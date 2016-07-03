@@ -3,7 +3,7 @@
 
 ## To-Do
 
-### Features
+### Features (aka big functionality changes)
 * Click and drag to navigate horizontally with momentum (http://www.smoothdivscroll.com/mixedContentTouch.html) (I got this one)
 * Give 'custom' content streams an input box (i.e. to allow adding custom subreddits that all share the same template)
 * Categorize different feeds in the 'Add Feed' modal, like a catalog
@@ -17,7 +17,7 @@
 * Adblock?
 
 
-### Fixes
+### Fixes (aka small technical improvements)
 
 * ~~Add feeds function saves feed to `marks.json`~~ (done, but doesn't pretty print it)
 * Disable adding feeds you already have
