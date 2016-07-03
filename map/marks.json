@@ -1,0 +1,9 @@
+{
+  "list":[
+    {
+      "domain" : "reddit",
+      "page" : "Any_Subreddit",
+      "custom" : "/r/news"
+    }
+  ]
+}
