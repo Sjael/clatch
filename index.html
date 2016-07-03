@@ -103,27 +103,17 @@
 
   <!-- Scripts -->
   <script>
-    // Handles adding a feed
-    $(document).ready(function(){
-      $('div.addPage').click(function(){
-        console.log(this);
+  // Handles adding a feed
+  $(document).ready(function(){
+    $('div.addPage').click(function(){
+      console.log(this);
+      // Call add function (in dash.js)
+      addFeed(this);
+      // Dismiss modal
+      $('#addModal').modal('hide');
 
-        var addDom = $(this).data("domain");
-        var addPag = $(this).data("page");
-
-        // Add the feed to page
-        getPage(ref.supported[addDom].pages[addPag], dashCount, "");
-        // Save feed to marks.json
-        //
-
-        // Dismiss modal
-        $('#addModal').modal('hide');
-
-      });
     });
-
-
-
+  });
   </script>
 
   <!-- Dashboard functionality -->

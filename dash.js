@@ -137,3 +137,21 @@ function getPage(item, i, custom){
 
 // webview in Trending tab that we can use to sign in to sites
 var startup = document.getElementById("startup");
+
+// add feed function
+function addFeed(clicked){
+  var addDom = $(clicked).data("domain");
+  var addPag = $(clicked).data("page");
+
+  // until customs are worked out
+  // var addCust = $(clicked).data("custom");
+
+  // Add the feed to page
+  getPage(ref.supported[addDom].pages[addPag], dashCount,"");
+  //convert to json
+  var obj = {"domain": addDom, "page": addPag, "custom": ""}
+  marks.list.push(obj);
+  // fs write to marks.json
+  var strmarks = JSON.stringify(marks);
+  fs.writeFile('map/marks.json', strmarks, 'utf8')
+}
