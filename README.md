@@ -40,7 +40,7 @@
 
 ## How to sign in before a handler is made
 
-On the Trending tab there is a `<webview>` called 'startup'. Use the `.loadURL()` method to navigate to sites that needs to be signed into in order to have their feeds tested, since there is no easy way to sign in yet. Use the DevTools that opens on the right side on program startup. If closed, hit Ctrl-Shift-I. Example: `startup.loadURL(https://twitter.com)`
+On the Trending tab there is a `<webview>` called 'startup'. Use the `.loadURL()` method to navigate to sites that needs to be signed into in order to have their feeds tested, since there is no easy way to sign in yet. Use the DevTool's console that opens on the right side on program startup. If closed, hit Ctrl-Shift-I. Example: `startup.loadURL(https://twitter.com)`
 Documentation: http://electron.atom.io/docs/api/web-view-tag/#webviewloadurlurl-options
 
 Then, go to the Dashboard tab and add the corresponding feed with the big button (Twitch isn't working yet) (Also you can't navigate sideways yet, so only about 3 feeds will fit)
