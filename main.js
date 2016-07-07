@@ -28,14 +28,11 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
-  //mainWindow.loadURL('http://smite.guru/builds');
 
   var winContents = mainWindow.webContents;
 
 
   // Open the DevTools.
-  //winContents.openDevTools();
-  //winContents.closeDevTools();
   winContents.toggleDevTools();
 
   // Emitted when the window is closed.

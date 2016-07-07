@@ -10,6 +10,7 @@
           "domain" : "reddit",
     			"title": "Any Subreddit",
           "name" : "Any_Subreddit",
+          "enabled": true,
           "sign": {
             "need" : false
           },
@@ -32,6 +33,7 @@
           "domain" : "twitch",
     			"title": "Following",
           "name" : "Following",
+          "enabled": false,
           "sign": {
             "need" : true,
             "detect": "div#login-subwindow",
@@ -56,6 +58,7 @@
           "domain" : "twitter",
     			"title": "Timeline",
           "name" : "Timeline",
+          "enabled": true,
           "sign": {
             "need" : true,
             "detect": "",
@@ -80,6 +83,7 @@
           "domain" : "youtube",
     			"title": "Subscriptions",
     			"name": "Subscriptions",
+          "enabled": true,
           "sign": {
             "need": true,
             "detect": "div#signin-container",

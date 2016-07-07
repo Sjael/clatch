@@ -135,7 +135,7 @@ function getPage(item, i, custom){
   dashCount++;
 }
 
-// webview in Trending tab that we can use to sign in to sites
+// webview in Trending tab that we can use to sign in to sites until a handler is made
 var startup = document.getElementById("startup");
 
 // add feed function
@@ -146,7 +146,7 @@ function addFeed(clicked){
   // until customs are worked out
   // var addCust = $(clicked).data("custom");
 
-  // Add the feed to page
+  // Add the feed to page with getPage
   getPage(ref.supported[addDom].pages[addPag], dashCount,"");
   //convert to json
   var obj = {"domain": addDom, "page": addPag, "custom": ""}

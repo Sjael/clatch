@@ -21,17 +21,17 @@
 
   </head>
 
-  <!-- Main Content -->
+  <!-- Body -->
   <body>
 
     <!-- Drag bar -->
     <div id="drag"></div>
 
-    <!-- Changing Content -->
+    <!-- Main Content -->
     <div id="base" class="full">
       <!-- Top bar -->
       <div id="bar">
-        <!-- Tab info bar -->
+        <!-- Tabs -->
         <div id="section">
           <ul id="tabholder" class="nav nav-tabs" role="tablist">
             <li role="presentation" class="dashtab active">
@@ -102,8 +102,29 @@
 
 
   <!-- Scripts -->
+
+  <!-- Dashboard functionality -->
+  <script type="text/JavaScript" src="dash.js"></script>
+  <!-- Dock Buttons -->
+  <script type="text/JavaScript" src="renderer.js"></script>
+
+  <script src="assets/js/scroll/ftscroller.js" type="text/javascript"></script>
+
   <script>
   // Handles adding a feed
+  var containerElement, scroller;
+
+  containerElement = document.getElementById('canvas');
+
+  scroller = new FTScroller(containerElement, {
+      scrollbars: true,
+      scrollingX: true,
+      scrollingY: false,
+      invertScrollWheel: false,
+      updateOnChanges: true,
+      updateOnWindowResize: true
+  });
+
   $(document).ready(function(){
     $('div.addPage').click(function(){
       console.log(this);
@@ -111,14 +132,12 @@
       addFeed(this);
       // Dismiss modal
       $('#addModal').modal('hide');
-
     });
+
   });
+
+
   </script>
 
-  <!-- Dashboard functionality -->
-  <script type="text/JavaScript" src="dash.js"></script>
-  <!-- Dock Buttons -->
-  <script type="text/JavaScript" src="renderer.js"></script>
 
 </html>

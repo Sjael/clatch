@@ -3,7 +3,7 @@
   main pink color ff1842   60% opacity
   EE778D
   trans dark a81d39
-  
+
 */
 
 /* General Styles*/
@@ -380,7 +380,15 @@ src: url("assets/fonts/Montserrat/Montserrat-Black.otf") format("opentype");
 
 #canvas{
   white-space: nowrap;
-  padding: 7px;
+}
+
+#canvas .ftscroller_container{
+  height:100%;
+}
+
+#canvas .ftscroller_x.ftscroller_hwaccelerated{
+  height:100%;
+  padding:7px;
 }
 
 .webcontain{
