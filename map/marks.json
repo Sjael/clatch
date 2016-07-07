@@ -1,19 +1,9 @@
 {
   "list":[
     {
-      "domain" : "youtube",
-      "page" : "Subscriptions",
-      "custom" : ""
-    },
-    {
-      "domain" : "twitter",
-      "page" : "Timeline",
-      "custom" : ""
-    },
-    {
       "domain" : "reddit",
       "page" : "Any_Subreddit",
-      "custom" : "/r/smite"
+      "custom" : "/r/news"
     }
   ]
 }
