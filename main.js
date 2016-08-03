@@ -17,7 +17,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 1600,
     height: 800,
-    minWidth: 800,
+    minWidth: 900,
     minHeight: 600,
     titleBarStyle: 'hidden',
     frame : false,
@@ -33,7 +33,7 @@ function createWindow () {
 
 
   // Open the DevTools.
-  winContents.toggleDevTools();
+  //winContents.toggleDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
@@ -43,7 +43,9 @@ function createWindow () {
     mainWindow = null;
   });
 
-
+  winContents.on('will-navigate', ev => {
+    ev.preventDefault()
+  })
 
 
 }

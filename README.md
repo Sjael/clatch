@@ -5,15 +5,20 @@
 
 ### Features (aka big functionality changes)
 * ~~Click and drag to navigate horizontally with momentum~~ (https://github.com/ftlabs/ftscroller)
+* Links launch in program instead of launching in default browser (animate the page to slide from the right side, with a dismiss, maybe 'minimize' button to replace the top tab bar) (tweets may get modal functionality back one day)
+* New tab links (http://electron.atom.io/docs/api/web-view-tag/#event-new-window)
+* Sign in handler (modal that brings up the sign-in page for feeds that require user data)
+* Refresh page button
 * Give 'custom' content streams an input box (i.e. to allow adding custom subreddits that all share the same template)
 * Categorize different feeds in the 'Add Feed' modal, like a catalog
-* Links launch in program instead of launching in default browser (animate the page to slide from the right side, with a dismiss, maybe 'minimize' button to replace the top tab bar) (tweets may get modal functionality back one day)
-* Sign in handler (modal that brings up the sign-in page for feeds that require user data)
 * New supported feeds (Facebook, Techcrunch, Product Hunt, Medium, Email, etc.)
 * Clicking on the header with class `.webhead` opens up the full page with no injected styling (Useful for getting to secondary links not in the page's main feed)
 * Edit position or Remove feeds
 * Unhiding portions of the page outside of the main feed that are likely to have demand (like Twitter's tweet button, toggleable in settings)
 * Oh yeah, an actual Settings modal
+* Browsing History? (https://medium.com/@patrykadas/browserhistory-2abad38022b1#e55d)
+* Tutorial to the program?
+* Tutorials/Intros to different content streams?
 * Adblock?
 
 
@@ -44,4 +49,4 @@
 On the Trending tab there is a `<webview>` called 'startup'. Use the `.loadURL()` method to navigate to sites that needs to be signed into in order to have their feeds tested, since there is no easy way to sign in yet. Use the DevTool's console that opens on the right side on program startup. If closed, hit Ctrl-Shift-I. Example: `startup.loadURL(https://twitter.com)`
 Documentation: http://electron.atom.io/docs/api/web-view-tag/#webviewloadurlurl-options
 
-Then, go to the Dashboard tab and add the corresponding feed with the big button (Twitch isn't working yet) (Also you can't navigate sideways yet, so only about 3 feeds will fit)
+Then, go to the Dashboard tab and add the corresponding feed with the big button (Twitch isn't working yet)

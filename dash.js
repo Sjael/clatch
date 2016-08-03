@@ -97,7 +97,7 @@ function getPage(item, i, custom){
   var $contain = $(contain);
 
   // webview with url and preload.js for info extraction
-  var webAdd = "<webview id=web" + id + " src=" + item.url + custom + " class='dashweb' preload='./preload.js' disablewebsecurity ></webview>";
+  var webAdd = "<webview id='web" + id + "' src=" + item.url + custom + " class='dashweb' preload='./preload.js' disablewebsecurity ></webview>";
   // add feed DOM to page
   $contain.append(webAdd);
   var elemi = document.getElementById("web" + id);
@@ -128,12 +128,28 @@ function getPage(item, i, custom){
 
       // might need to .injectJavascript() to give custom Apple-style scrollbar
 
+    }else if (e.channel === "clickLink"){
+      var doc = e.args[0];
+      console.log(doc);
+      openLink(doc);
     }
   });
 
   // increment up (since you can only add feeds at this point in development)
   dashCount++;
 }
+
+// when link is clicked in dash webview
+function openLink(link){
+  $("#browse").velocity({left:'0%'},{ duration: 400 },{easing: "ease-in-out"});
+
+  $("#bswitch").append("<webview id='webtab' src=" + link + " class='webtab open'></webview>");
+
+  // $("#browse").velocity({left:'100%'},{ duration: 300 },{easing: "ease-in-out"});
+}
+
+// $('#trendli').velocity({marginLeft:'-15px',opacity: '0', display:'none'},{ duration: 400 })
+// $('#trendli').velocity({marginLeft:'15px',opacity: '1', display:'block'},{ duration: 400 })
 
 // webview in Trending tab that we can use to sign in to sites until a handler is made
 var startup = document.getElementById("startup");

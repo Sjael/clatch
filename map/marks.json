@@ -1,9 +1,14 @@
 {
   "list":[
     {
+      "domain" : "youtube",
+      "page" : "Subscriptions",
+      "custom" : ""
+    },
+    {
       "domain" : "reddit",
       "page" : "Any_Subreddit",
-      "custom" : "/r/news"
+      "custom" : "/r/startups"
     }
   ]
 }

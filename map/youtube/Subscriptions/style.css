@@ -31,6 +31,10 @@
   overflow-y:hidden;
 }
 
+.yt-card{
+  overflow-x:hidden;
+}
+
 /*
 body{
   font: 12px Roboto,arial,sans-serif;

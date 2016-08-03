@@ -27,5 +27,14 @@ $(window).load(function() {
 // currently launching links into default browser  (need to set up ipc to send message to host process function to open IN the program)
 $(document).on('click', 'a[href]', function(event) {
   event.preventDefault();
-  shell.openExternal(this.href);
+  ipc.sendToHost("clickLink", this.href);
+});
+
+$(document).on('drop',function(event){
+  event.preventDefault();
+  return false;
+});
+$(document).on('dragover',function(event){
+  event.preventDefault();
+  return false;
 });

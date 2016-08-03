@@ -208,7 +208,7 @@ src: url("assets/fonts/Montserrat/Montserrat-Black.otf") format("opentype");
   overflow: hidden;
 }
 
-#bar{
+#dashbar{
   position:absolute;
   top:0;
   right:0;
@@ -276,28 +276,36 @@ src: url("assets/fonts/Montserrat/Montserrat-Black.otf") format("opentype");
 }
 
 #dock{
-  margin:9px;
-  position:absolute;
+  margin-top:8px;
   z-index: 9999;
+  position:fixed;
   right:0px;
   top:0px;
+  height:24px;
   -webkit-app-region: no-drag;
   -webkit-user-select: none;
   cursor:default;
 }
 
 .dockact{
-  padding:5px;
-  color: #9fafbf;
+  padding:10px 16px 10px 16px;
+  color: #8f9faf;
   width: 14px;
   height:14px;
   opacity:0.5;
   transition: all 0.15s ease-in-out;
 }
 
-.dockact:hover{
-  opacity: 0.9;
-  cursor:pointer;
+#mini-btn:hover, #max-btn:hover{
+  opacity: 0.8;
+  cursor:default;
+  background-color:#e4e4e4;
+}
+
+#x-btn:hover{
+  opacity:0.9;
+  color: #fff;
+  background-color:#ff4a4a;
 }
 
 
@@ -371,12 +379,20 @@ src: url("assets/fonts/Montserrat/Montserrat-Black.otf") format("opentype");
   margin: 50px 0px 0px 0px;
   height: calc(100% - 50px);
   background-color:#efeeee;
-
+  overflow:hidden;
+  position:relative;
 }
 
-#switch .tab-pane, #switch .tab-pane > div {
+#switch .tab-pane, #switch .tab-pane > div{
   height: 100%;
 }
+
+#home{
+  height:100%;
+  width:100%;
+  display:inline-block;
+}
+
 
 #canvas{
   white-space: nowrap;
@@ -448,6 +464,95 @@ src: url("assets/fonts/Montserrat/Montserrat-Black.otf") format("opentype");
 .dashweb{
   height: 100%;
 
+}
+
+#browse{
+  height:100%;
+  width:100%;
+  display:inline-block;
+  position:absolute;
+  top:0;
+  left:100%;
+}
+
+#browse .webtab{
+  height:100%;
+  width:100%;
+}
+
+#navbar{
+  height:70px;
+  width:100%;
+  background-color:#fff;
+  -webkit-app-region: drag;
+}
+
+#topbar > div, #botbar > div{
+  display:inline-block;
+}
+
+#topbar{
+  height:25px;
+  width:100%;
+}
+
+#disbar{
+  height:100%;
+  width:40px;
+  background-color:#ddd;
+  -webkit-app-region: no-drag;
+  padding:7px;
+  cursor:default;
+}
+
+#disbar span{
+  font-size:11px;
+  color:#444;
+  display:inline;
+}
+
+#disbar div{
+  margin-top:-4px;
+}
+
+#btabs{
+  -webkit-app-region: no-drag;
+}
+
+#botbar{
+  height:45px;
+  width:100%;
+  border-bottom:1px #ddd solid;
+  -webkit-app-region: no-drag;
+  padding:2px;
+}
+
+#backb, #forb, #refb{
+  width:34px;
+  height:34px;
+  padding:8px;
+  margin:2px;
+  float:left;
+  transition: all 0.2s ease-in-out;
+  border-style:solid;
+  border-width:1px;
+  border-color:transparent;
+}
+
+#backb:hover, #forb:hover, #refb:hover{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-color:#ddd;
+}
+
+#botbar div span{
+  font-size:16px;
+  color:#444;
+}
+
+#bswitch{
+  height: calc(100% - 70px);
+  width:100%;
+  background-color:#efeeee;
 }
 
 #addModal .modal-dialog{
