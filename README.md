@@ -5,7 +5,8 @@
 
 ### Features (aka big functionality changes)
 * ~~Click and drag to navigate horizontally with momentum~~ (https://github.com/ftlabs/ftscroller)
-* Links launch in program instead of launching in default browser (animate the page to slide from the right side, with a dismiss, maybe 'minimize' button to replace the top tab bar) (tweets may get modal functionality back one day)
+* ~~Links launch in program instead of launching in default browser (animate the page to slide from the right side, with a dismiss, maybe 'minimize' button to replace the top tab bar) (tweets may get modal functionality back one day)~~
+* Tabs and Address bar
 * New tab links (http://electron.atom.io/docs/api/web-view-tag/#event-new-window)
 * Sign in handler (modal that brings up the sign-in page for feeds that require user data)
 * Refresh page button
